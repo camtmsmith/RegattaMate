@@ -23,10 +23,10 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.COMport_LBL = New System.Windows.Forms.Label()
@@ -189,8 +189,8 @@ Partial Class Form1
         '
         'PlaceCol
         '
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.PlaceCol.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.PlaceCol.DefaultCellStyle = DataGridViewCellStyle1
         Me.PlaceCol.HeaderText = "Place"
         Me.PlaceCol.Name = "PlaceCol"
         Me.PlaceCol.ReadOnly = True
@@ -198,24 +198,24 @@ Partial Class Form1
         '
         'LaneCol
         '
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LaneCol.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LaneCol.DefaultCellStyle = DataGridViewCellStyle2
         Me.LaneCol.HeaderText = "Lane"
         Me.LaneCol.Name = "LaneCol"
         Me.LaneCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'MarginCol
         '
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.MarginCol.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.MarginCol.DefaultCellStyle = DataGridViewCellStyle3
         Me.MarginCol.HeaderText = "Margin"
         Me.MarginCol.Name = "MarginCol"
         Me.MarginCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'TimeCol
         '
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.TimeCol.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.TimeCol.DefaultCellStyle = DataGridViewCellStyle4
         Me.TimeCol.HeaderText = "Time"
         Me.TimeCol.Name = "TimeCol"
         Me.TimeCol.ReadOnly = True
@@ -513,7 +513,7 @@ Partial Class Form1
         Me.Controls.Add(Me.recData_LBL)
         Me.Controls.Add(Me.COMport_LBL)
         Me.Name = "Form1"
-        Me.Text = "RQ Gizmo - Timing Control"
+        Me.Text = "Regatta Mate - Finish"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -5,10 +5,6 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RQGizmo", "Arduino_Visual-Basic\RQGizmo.vbproj", "{5F2F365B-18B8-4695-9817-12F3E80A51DD}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RQGizmoSetup", "RQGizmoSetup\RQGizmoSetup.vdproj", "{C6647805-40A9-495D-926B-37A3BA93CF2D}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RegattaFinish", "RegattaFinish\RegattaFinish.vdproj", "{443C5C93-E878-4CEA-9EEA-4CD1D62307DE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,10 +15,6 @@ Global
 		{5F2F365B-18B8-4695-9817-12F3E80A51DD}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{5F2F365B-18B8-4695-9817-12F3E80A51DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F2F365B-18B8-4695-9817-12F3E80A51DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6647805-40A9-495D-926B-37A3BA93CF2D}.Debug|Any CPU.ActiveCfg = Debug
-		{C6647805-40A9-495D-926B-37A3BA93CF2D}.Release|Any CPU.ActiveCfg = Release
-		{443C5C93-E878-4CEA-9EEA-4CD1D62307DE}.Debug|Any CPU.ActiveCfg = Debug
-		{443C5C93-E878-4CEA-9EEA-4CD1D62307DE}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
