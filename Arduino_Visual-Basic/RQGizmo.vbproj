@@ -24,7 +24,7 @@
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
+    <MapFileExtensions>false</MapFileExtensions>
     <InstallUrl>https://raw.githubusercontent.com/camtmsmith/RegattaMate/refs/heads/master/ClickOnce/</InstallUrl>
     <ProductName>FinishControl</ProductName>
     <PublisherName>RegattaMate</PublisherName>
