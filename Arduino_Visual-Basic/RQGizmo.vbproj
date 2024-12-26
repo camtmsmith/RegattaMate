@@ -28,6 +28,7 @@
     <InstallUrl>https://raw.githubusercontent.com/camtmsmith/RegattaMate/refs/heads/master/ClickOnce/</InstallUrl>
     <ProductName>FinishControl</ProductName>
     <PublisherName>RegattaMate</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <ApplicationRevision>7</ApplicationRevision>
