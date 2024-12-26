@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("RQ Finish Timing Module")>
+<Assembly: AssemblyTitle("Regatta Mate Timing")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("CRES")>
-<Assembly: AssemblyProduct("Gizmo")>
+<Assembly: AssemblyCompany("RegattaMate")>
+<Assembly: AssemblyProduct("FinishControl")>
 <Assembly: AssemblyCopyright("Copyright ©  2024")>
 <Assembly: AssemblyTrademark("")>
 
