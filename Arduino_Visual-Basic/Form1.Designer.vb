@@ -23,10 +23,10 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.COMport_LBL = New System.Windows.Forms.Label()
@@ -73,8 +73,12 @@ Partial Class Form1
         Me.Race = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Delay = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.StartTime = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'SerialPort1
+        '
         '
         'Timer1
         '
@@ -189,8 +193,8 @@ Partial Class Form1
         '
         'PlaceCol
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.PlaceCol.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.PlaceCol.DefaultCellStyle = DataGridViewCellStyle1
         Me.PlaceCol.HeaderText = "Place"
         Me.PlaceCol.Name = "PlaceCol"
         Me.PlaceCol.ReadOnly = True
@@ -198,24 +202,24 @@ Partial Class Form1
         '
         'LaneCol
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LaneCol.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LaneCol.DefaultCellStyle = DataGridViewCellStyle2
         Me.LaneCol.HeaderText = "Lane"
         Me.LaneCol.Name = "LaneCol"
         Me.LaneCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'MarginCol
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.MarginCol.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.MarginCol.DefaultCellStyle = DataGridViewCellStyle3
         Me.MarginCol.HeaderText = "Margin"
         Me.MarginCol.Name = "MarginCol"
         Me.MarginCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'TimeCol
         '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.TimeCol.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.TimeCol.DefaultCellStyle = DataGridViewCellStyle4
         Me.TimeCol.HeaderText = "Time"
         Me.TimeCol.Name = "TimeCol"
         Me.TimeCol.ReadOnly = True
@@ -473,11 +477,21 @@ Partial Class Form1
         Me.StartTime.Text = "Start Time"
         Me.StartTime.Width = 82
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 72
+        Me.Label1.Text = "Label1"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(903, 571)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.connect_lbl)
         Me.Controls.Add(Me.lstConsole)
@@ -566,4 +580,5 @@ Partial Class Form1
     Friend WithEvents Race As ColumnHeader
     Friend WithEvents Delay As ColumnHeader
     Friend WithEvents StartTime As ColumnHeader
+    Friend WithEvents Label1 As Label
 End Class
