@@ -26,7 +26,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
     <InstallUrl>https://raw.githubusercontent.com/camtmsmith/RegattaMate/refs/heads/master/ClickOnce/</InstallUrl>
-    <ProductName>FinishControl2</ProductName>
+    <ProductName>FinishControl</ProductName>
     <PublisherName>RegattaMate</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
