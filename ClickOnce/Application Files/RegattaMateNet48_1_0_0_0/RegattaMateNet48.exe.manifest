@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="RegattaMateNet48.exe" version="1.0.0.0" publicKeyToken="6cef948665e9dd6c" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:publisher="RegattaMate" asmv2:product="FinishControl" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="RegattaMateNet48" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="RegattaMateNet48.exe" parameters="" />
+  </entryPoint>
+  <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RegattaMateNet48.exe" size="17848">
+      <assemblyIdentity name="RegattaMateNet48" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>uj8egZWfDLNqUmRwWxMuNPJMMwy6bwiBGjkNPzvSSpY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="RegattaMateNet48.exe.config" size="186">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rO4mjoMPTzC1RdE+BMvf0lfywGmtOsKfE96n+SRa584=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=CCRE2000\camtm" issuerKeyHash="307bd9db9766b2e199a53aa11f83edea516d62fa" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>vx/OKcoO0ytN/chA1MWq/lGVRWaF3sj+f6+1wyVLdl4=</DigestValue></Reference></SignedInfo><SignatureValue>w1YqxfpbLdCXSMtPJjC5oOL0ETUzNXW0X49ZDUOVVeA+cu0Y/3OFAvN9fCQMbnymY592f90Bwqi8g3zz5AqdWVY4Gj7nMXaOGGGepTuQKM+tlxJ/+O08LE13tYx1SCtigBlxgjPai7rMAU0ubVmO3QBOw0uD03F2owOXUpCgcqI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>1T5WH/SDxPiVdtrKOvscQ5fgMdTbh7bhS2u0BZHL92uo5bLb4pBaio4dww7w4aw031h67mhRTB40PulMcAXoZNOMtul5BWNQUvglFSBbIlXZx6fCHZN+GEJ0GkXWcLdAn50x6pEwl/ykYdgEfSpEk4SLaIPUdW+h79MTfsjYnCU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5e764b25c3b5af7ffec8de8566459551feaac5d440c8fd4d2bd30eca29ce1fbf" Description="" Url=""><as:assemblyIdentity name="RegattaMateNet48.exe" version="1.0.0.0" publicKeyToken="6cef948665e9dd6c" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CCRE2000\camtm</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>pzuXRLh/13tK9oVX+NrnnyVzF2Szn/CIqULZ8i6a+xs=</DigestValue></Reference></SignedInfo><SignatureValue>0rfSGXOQOAtbM/zE8NOx9srakhBJDWzGqil6+56Q/7XURmv82F4hzIezQiN86mYQShJYttoKGyulAS0+55U4e0rZpNgklVlzlK13vcW87m+iM9BCX6vVE7qhPHfU3z3oCjvKpacb/134+HmzOcjQ3tEnABfaJ30YCSa7aEP6y0I=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>1T5WH/SDxPiVdtrKOvscQ5fgMdTbh7bhS2u0BZHL92uo5bLb4pBaio4dww7w4aw031h67mhRTB40PulMcAXoZNOMtul5BWNQUvglFSBbIlXZx6fCHZN+GEJ0GkXWcLdAn50x6pEwl/ykYdgEfSpEk4SLaIPUdW+h79MTfsjYnCU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQOXTk0C15T5RL3s/BIfpRezANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwAQwBDAFIARQAyADAAMAAwAFwAYwBhAG0AdABtMB4XDTI0MTIyNjA1MTE0NFoXDTI1MTIyNjExMTE0NFowJzElMCMGA1UEAx4cAEMAQwBSAEUAMgAwADAAMABcAGMAYQBtAHQAbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA1T5WH/SDxPiVdtrKOvscQ5fgMdTbh7bhS2u0BZHL92uo5bLb4pBaio4dww7w4aw031h67mhRTB40PulMcAXoZNOMtul5BWNQUvglFSBbIlXZx6fCHZN+GEJ0GkXWcLdAn50x6pEwl/ykYdgEfSpEk4SLaIPUdW+h79MTfsjYnCUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBZS23gxwUdeHZvUF9okDzmPADy7Zuwdkam6RKX8UdbiftR+7vbTiWUg29sht1levsnXPth1amFahAXCWEGOK7a2Y7MX326shCvURiyeLxD1LCWGtqeRWxjdI7SdbZNolYqxbojuouNsNqEQqigi3QjAXJYD3StsU80zVVLG4hX8A==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

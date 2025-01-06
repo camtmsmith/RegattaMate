@@ -113,7 +113,11 @@ Public Class Form1
         ' Create tempory racefile directory
         Directory.CreateDirectory(RaceFileDir)
         'Start Chrome is not running
-        If Process.GetProcessesByName("chrome").Length = 0 Then Process.Start("chrome.exe")
+        If Process.GetProcessesByName("chrome").Length = 0 Then
+            'Process.Start("chrome.exe")
+            Dim URL As String = "https://timing.rowingmanager.com/"
+            Process.Start(URL)
+        End If
         'Set App to focus
         Me.BringToFront()
         Me.Width = 545
@@ -137,40 +141,7 @@ Public Class Form1
     ' Note: There is no error catching. If the connection attampt fails the app will crash!
     Private Sub connect_BTN_Click(sender As Object, e As EventArgs) Handles connect_BTN.Click
         If (connect_BTN.Text = "CONNECT") Then
-
-            'testing new way
-            If True Then
-                autoconnect()
-
-            Else
-                'Old Code
-                If (selected_COM_PORT <> "") Then
-                    ' Try allows me to trap an errors such as the COM port not being available
-                    ' Without it the app crashes.
-                    Try
-                        SerialPort1.PortName = selected_COM_PORT
-                        SerialPort1.BaudRate = 9600
-                        SerialPort1.DataBits = 8
-                        SerialPort1.Parity = Parity.None
-                        SerialPort1.StopBits = StopBits.One
-                        SerialPort1.DtrEnable = True
-                        SerialPort1.RtsEnable = True
-                        SerialPort1.Handshake = Handshake.None
-
-                        SerialPort1.Encoding = System.Text.Encoding.Default 'very important!
-                        SerialPort1.ReadTimeout = 10000
-
-                        SerialPort1.Open()
-
-                    Catch ex As Exception
-                        MessageBox.Show(ex.Message + vbCrLf + "Looks like something else is using it.", "Error opening the serial port", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End Try
-
-                Else
-                    MsgBox("No COM port selected!")
-                End If
-            End If
-
+            autoconnect()
         Else
             Try
                 SerialPort1.Close()
@@ -426,9 +397,11 @@ Public Class Form1
             TrigStr = "{F9}" 'Stop Capture
             If DataGridView1.RowCount > 1 Then RaceSaveBtn.Enabled = True
             RaceCombo.Enabled = True
+            Me.BackColor = DefaultBackColor
         ElseIf DataVal(0) = "VR" Then
             ' Set Race nummber from Serial
             Dim RaceNoStr = CInt(DataVal(1)).ToString(RaceNoFmt)
+            Me.BackColor = Color.IndianRed
             ' Set up New Race
             'AddRace(RaceNoStr)
             ' prevent changing race no
@@ -977,11 +950,12 @@ Public Class Form1
                 SerialPort1.Open()
                 'Sent msg and wait for response
                 SerialPort1.Write("3")
-                TimerConnect.Interval = 500
+                TimerConnect.Interval = 250
                 TimerConnect.Start()
-                Dim str As String = SerialPort1.ReadExisting()
-                If str.Contains("51") Then
-                    'MsgBox("Gizmo Found " + SerialPort1.PortName + " - " + str)
+                'Dim str As String = SerialPort1.ReadExisting()
+                'MsgBox(SerialPort1.PortName + " " + str)
+                If False Then 'str.Contains("51") Then
+                    'MsgBox("Gizmo Found " + SerialPort1.PortName + " - " + Str())
                     ArduinoConnected = True
                     lstConsole.Items.Add("Arduino Connected")
                     btnConnect.Text = "Connected !" + SerialPort1.PortName
@@ -994,6 +968,7 @@ Public Class Form1
                     connect_BTN.Text = "DIS-CONNECT"
                     connect_BTN.BackColor = SystemColors.Control
                     Timer1.Enabled = True
+                    Timer1.Interval = 100
                     timer_LBL.Text = "TIMER: ON"
                     btnConnect.Text = "Disconnect" '' old button
                     'SerialPort1.Write("0")
@@ -1012,7 +987,7 @@ Public Class Form1
 
     Private Sub BtnConnect_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConnect.Click
         Test()
-
+        End
         If ArduinoConnected Then
             SerialPort1.Close()
             btnConnect.Text = "Connect"
@@ -1118,5 +1093,16 @@ Public Class Form1
     Sub Test()
         Dim URL As String = "https://timing.rowingmanager.com/"
         Process.Start(URL)
+    End Sub
+
+    ' This runs in the background and cannot update GUI.
+    ' If data is received and not connected, check if it's the finish control
+    Private Sub SerialPort1_DataReceived(sender As Object, e As SerialDataReceivedEventArgs) Handles SerialPort1.DataReceived
+        If Not ArduinoConnected Then
+            If SerialPort1.ReadExisting.Contains("Arduino Finish") Then
+                'MsgBox("Control Found " + SerialPort1.PortName)
+                ArduinoConnected = True
+            End If
+        End If
     End Sub
 End Class
